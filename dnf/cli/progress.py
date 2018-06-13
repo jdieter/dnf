@@ -148,6 +148,7 @@ class MultiFileProgressMeter(dnf.callback.DownloadProgress):
         start = now = time()
         text = unicode(payload)
         size = int(payload.download_size)
+        done = 0
 
         # update state
         if status == dnf.callback.STATUS_MIRROR:
